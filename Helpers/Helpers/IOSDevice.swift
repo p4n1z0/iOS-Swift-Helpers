@@ -27,10 +27,12 @@ public struct IOSDevice: Device {
     }
     
     public var identifierForVendor: String {
-        guard let identifier = UIDevice.current.identifierForVendor?.uuidString else {
-            fatalError("Identifier for vendor must exist")
-        }
-        return "\(identifier)"
+//        guard let identifier = UIDevice.current.identifierForVendor?.uuidString else {
+//        guard let identifier = UUID().uuidString else {
+//            fatalError("Identifier for vendor must exist")
+//        }
+//        return "\(identifier)"
+        return UUID().uuidString
     }
 
     public var footprint: String {
