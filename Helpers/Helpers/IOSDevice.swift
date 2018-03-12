@@ -1,5 +1,9 @@
 import UIKit
 import CryptoSwift
+import Locker
+
+private let keychainServiceId = "com.ciber-es.utils"
+private let keychainFootprint = "devicePersistentFootprint"
 
 public protocol Device {
     var osName: String { get }
@@ -34,11 +38,21 @@ public struct IOSDevice: Device {
     }
 
     public var footprint: String {
-        let identifierForVendorSha256 = identifierForVendor.sha256()
-        let modelSha256 = UIDevice.current.model.sha256() //Use current Model instead of fancy model.
-        let systemNameSha256 = osName.sha256()
+            guard let storedDeviceFootprint = Locker.read(stringFromService: keychainServiceId, andAccount: keychainFootprint) else {
+            // Build a new footprint
+            let identifierForVendorSha256 = identifierForVendor.sha256()
+            let modelSha256 = UIDevice.current.model.sha256() //Use current Model instead of fancy model.
+            let systemNameSha256 = osName.sha256()
+            
+            let superHash = "\(identifierForVendorSha256)\(modelSha256)\(systemNameSha256)".sha256()
+            let saved = Locker.save(superHash, inService: keychainServiceId, andAccount: keychainFootprint)
+            if !saved {
+                print("Error saving device footprint in Keychain. Check if \"Keychain sharing capability\" is enabled.")
+            }
+            
+            return superHash.base64Encoded
+        }
         
-        let superHash = "\(identifierForVendorSha256)\(modelSha256)\(systemNameSha256)".sha256()
-        return superHash.base64Encoded
+        return storedDeviceFootprint
     }
 }

@@ -1,1 +1,2 @@
-github "krzyzanowskim/CryptoSwift" "0.7.2"
+git "ssh://git@gitlab.ciber-es.com:7346/mobility/Ciber/Common/iOS/iOS-Locker" "v1.1.0"
+github "krzyzanowskim/CryptoSwift" "0.8.3"

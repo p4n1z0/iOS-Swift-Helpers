@@ -10,6 +10,7 @@
 		6CC4E42D1E5E4C1B000BD798 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC4E42C1E5E4C1B000BD798 /* Dictionary.swift */; };
 		733D62611DA54D79000DB0E4 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733D62601DA54D79000DB0E4 /* UIImageExtensions.swift */; };
 		733D62631DA54F91000DB0E4 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733D62621DA54F91000DB0E4 /* UIImageViewExtensions.swift */; };
+		79807EE12056B7C90023F372 /* Locker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79807EE02056B7C90023F372 /* Locker.framework */; };
 		806133D41DABE4E400334A7A /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806133D31DABE4E400334A7A /* UITableViewCellExtensions.swift */; };
 		F20667C51E23DD600075DC32 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20667C41E23DD600075DC32 /* CollectionExtensions.swift */; };
 		F20F72A51E40EB94003ADA2F /* EKParticipantExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F72A41E40EB94003ADA2F /* EKParticipantExtensions.swift */; };
@@ -77,6 +78,7 @@
 		6CC4E42C1E5E4C1B000BD798 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		733D62601DA54D79000DB0E4 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		733D62621DA54F91000DB0E4 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		79807EE02056B7C90023F372 /* Locker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locker.framework; path = ../Carthage/Build/iOS/Locker.framework; sourceTree = "<group>"; };
 		806133D31DABE4E400334A7A /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		F20667C41E23DD600075DC32 /* CollectionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		F20F72A41E40EB94003ADA2F /* EKParticipantExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKParticipantExtensions.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79807EE12056B7C90023F372 /* Locker.framework in Frameworks */,
 				F2C76FBD1E8C174400B7B7DA /* CryptoSwift.framework in Frameworks */,
 				F20F72A71E40ED9F003ADA2F /* EventKit.framework in Frameworks */,
 				F23CA0CC1DA69C1F006007EF /* UIKit.framework in Frameworks */,
@@ -204,6 +207,7 @@
 		F23CA0CA1DA69C1F006007EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79807EE02056B7C90023F372 /* Locker.framework */,
 				F2C76FBC1E8C174400B7B7DA /* CryptoSwift.framework */,
 				F20F72A61E40ED9F003ADA2F /* EventKit.framework */,
 				F23CA0CB1DA69C1F006007EF /* UIKit.framework */,
