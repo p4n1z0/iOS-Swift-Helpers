@@ -1,0 +1,3 @@
+[submodule "fastlane"]
+	path = fastlane
+	url = git@gitlab.ciber-es.com:mobility/Ciber/Common/iOS/fastlane.git
