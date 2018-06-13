@@ -38,7 +38,7 @@ public struct IOSDevice: Device {
     }
 
     public var footprint: String {
-            guard let storedDeviceFootprint = Locker.read(stringFromService: keychainServiceId, andAccount: keychainFootprint) else {
+        guard let storedDeviceFootprint = Locker.read(stringFromService: keychainServiceId, andAccount: keychainFootprint) else {
             // Build a new footprint
             let identifierForVendorSha256 = identifierForVendor.sha256()
             let modelSha256 = UIDevice.current.model.sha256() //Use current Model instead of fancy model.
@@ -53,6 +53,6 @@ public struct IOSDevice: Device {
             return superHash.base64Encoded
         }
         
-        return storedDeviceFootprint
+        return storedDeviceFootprint.base64Encoded
     }
 }
