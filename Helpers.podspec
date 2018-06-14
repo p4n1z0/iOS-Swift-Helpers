@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'Helpers'
-  s.version      = '6.1.2'
+  s.version      = '6.1.3'
   s.summary      = 'Helpers.'
 
   # This description is used to generate tags and improve search results.
